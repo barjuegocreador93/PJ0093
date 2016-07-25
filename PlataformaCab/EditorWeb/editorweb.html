@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>EditorWeb</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <style>
+            h1,h2,td,th{
+                text-align: center;
+            }
+            form div{
+                margin-bottom: 5px;
+            }
+            body{
+                min-height: 2000px;
+            }
+            .border-left{
+                border-right-width: 5px;
+                border-right-style: solid;
+                border-right-color: black;
+
+            }
+            .tablero
+            {
+                border: 5px;
+                border-color: black;
+                border-style: solid;
+            }
+            .toolbar
+            {
+                border: 1px;
+                border-color: black;
+                border-style: solid;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header class="jumbotron btn-success menua1_off menua2_off menua3_on">
+            <h1>Editor Web</h1>
+            <h2>Crea tu web!</h2>
+        </header>
+        <nav id="editorFirstNav" class="">
+            <div class="container">
+                <button class="btn btn-default menuA3 activ_on">Home</button>
+                <button class="btn btn-default menuA1 getText">Nuevo Proyecto</button>
+                <button class="btn btn-default menuA2 getText menua1_1_on">Abrir Proyecto</button>
+
+            </div>
+            <ul class="list-unstyled menua1_1_on menua2_off menua1_off menua3_off">
+                <li><button class="btn btn-default menuA2_1_1 activ_togg">Menu</button></li>
+                <div class="menua2_1_1 menua2_2_off">
+                    <li><a class="btn btn-default menuA2_2 activ_togg getText" href="#editorUp">Archivo Nuevo</a></li>
+                    <li><button class="btn btn-default menuA2_1 activ_togg">Vista</button></li>
+                    <li><button class="btn btn-default menuA2_3 activ_togg">Root Proyect</button></li>
+                    <li><button class="btn btn-default">Configuracion</button></li>
+                    <li><button class="btn btn-default menuA2_3 activ_togg">Root Proyect</button></li>
+                </div>
+            </ul>
+
+        </nav>
+        <section class="menua3 ">
+            <div class="container">
+                <p>Editor Web es la herramienta principal del desarrollador web!</p>
+            </div>
+
+        </section>
+        <section class="menua1 h_2 Hide Show">
+            <div class="container-fluid"> 
+                <form >
+                    <div class="col-md-4">
+                        <input class="form-control" type="text" name="nombrep" placeholder="Nombre del nuevo pryecto" required autofocus/>
+                    </div>  
+                    <div class="col-md-4">
+                        <input class="form-control" type="text" name="autor" placeholder="Autor" />                    
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control" type="text" name="fecha" value="" readonly="readonly"/>                                           
+                    </div>  
+                </form>
+                <button id="npbtn" class="btn btn-danger disabled">Crear Proyecto</button>
+            </div>
+
+        </section>
+        <section class="menua2 h_2 Hide Show container menua1_1_off">
+            <label>Selecciona un proyecto: </label>
+            <div id="proyects" class="container">
+
+
+            </div>
+            <nav id="proyectsActions" class="navbar-fixed-bottom container">
+                <ul class="list-inline">
+                    <li>
+                        <h2></h2>
+                    </li>
+                    <li><a class="btn btn-default menuA1_1 menua2_on getText">Editor</a></li>
+                    <li><a class="btn btn-default">Eliminar</a></li>
+                    <li class="hide"></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="editorUp" class="menua1_1 h_1 menua2_off menua3_off menua1_off ">
+            <div class="container">
+
+                <div id="editorNewFile" class="col-md-3 border-left menua2_2 menua2_1_1_off h_3">
+                    <section class="">                        
+                        <form>
+                            <input class="form-control" type="text" name="fileName" placeholder="Nombre del Archivo" />
+                            <select class="btn btn-default"  name="tipo" >
+                                <option>HTML</option>
+                                <option>JS</option>
+                                <option>PHP</option>
+                            </select>                        
+                        </form>
+                        <button id="saveFile"  class="btn btn-danger disabled">Guardar</button>
+                    </section>
+                </div>
+                <div class="container tablero">
+                    <h3>TAB</h3>
+                </div>
+                <nav id="editorAtributos" class="navbar-fixed-top navbar-right"  style="z-index: 1030; left: 0%; top:75%;">
+                    <button class="btn btn-default menua2_1" style="float:left;">Move</button>
+                    <div class="">
+                        <h4>Herramientas:</h4>
+                        <table >
+                            <tr><td>nombre:</td><td><input type="text"></td></li>
+                            <tr><td>id:</td><td><input type="text"></td></li>
+                            <tr><td>class:</td><td><input type="text"></td></li>
+                            <tr><td>text:</td><td><input type="text"></td></li>
+                            <tr><td>attr:</td><td><input type="text"></td></li>
+                        </table>
+                    </div>
+
+                </nav>
+                 <nav id="editorFiles" class="navbar-fixed-top navbar-right"  style="z-index: 1030; left: 30%; top:75%;">
+                    <button class="btn btn-default menua2_1" style="float:left;">Move</button>
+                    <div class="">
+                        <h4>Archivos:</h4>
+                        <ul>
+                            
+                        </ul>                        
+                    </div>
+
+                </nav>
+                <nav id="editorHtmlObjs" class="navbar-fixed-top navbar-right"  style="z-index: 1030; left: 60%; top:75%;">
+                    <button class="btn btn-default menua2_1" style="float:left;">Move</button>
+                    <div class="">
+                        <h4>Objetos:</h4>
+                        <ul>
+                            
+                        </ul>                        
+                    </div>
+
+                </nav>
+            </div>
+        </section>
+
+    </body>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/FST-APP.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>    
+    <script src="js/editor.js" type="text/javascript"></script>
+</html>

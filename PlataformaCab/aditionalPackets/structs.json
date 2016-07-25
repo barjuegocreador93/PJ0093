@@ -1,0 +1,10 @@
+{
+    "init": "<html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+    "title": "<title>V0</title>",
+    "css": "<link href='V0' rel='stylesheet' type='text/css'/>",
+    "js": "<script src='V0' type='text/javascript'></script>",
+    "hh1p": "<header class='V2'><h1 class='V3'>V0</h1><img class='V4' href='V1'></header>",
+    "script":"<script type='text/javascript'>V0</script>",
+    "style":"<style>V0</style>"
+
+}

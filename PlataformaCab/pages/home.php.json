@@ -1,0 +1,28 @@
+{
+    "head": [["css", ["./aditionalPackets/newcss.css"]], ["title", ["hola mundo"]]],
+    "body": [
+        ["_objeto", [{
+                    "nombre": "header",
+                    "mas": "",
+                    "hijo": [{
+                            "nombre": "h1",
+                            "mas": "class='x'",
+                            "texto": "Hola mundo",
+                            "hijo": null
+                        }, {
+                            "nombre": "h2",
+                            "mas": "class='x'",
+                            "texto": "Nada mas que hacer",
+                            "hijo": null
+                        }]
+
+                }, {
+                    "nombre": "a",
+                    "mas": "href='./EditorWeb/editorweb.html'",
+                    "texto": "Nada mas que hacer",
+                    "hijo": null
+                }
+            ]
+        ]
+    ]
+}
